@@ -6,8 +6,8 @@ from nose.tools import eq_, ok_, assert_raises
 from mock import Mock
 
 from collector.crashmover_app import CrashMoverApp
-from socorro.lib.threaded_task_manager import ThreadedTaskManager
-from socorro.lib.util import DotDict, SilentFakeLogger
+from socorrolib.lib.threaded_task_manager import ThreadedTaskManager
+from socorrolib.lib.util import DotDict, SilentFakeLogger
 from socorro.unittests.testbase import TestCase
 
 

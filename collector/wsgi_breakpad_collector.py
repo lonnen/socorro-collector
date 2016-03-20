@@ -4,9 +4,9 @@
 
 import time
 
-from socorro.lib.ooid import createNewOoid
+from socorrolib.lib.ooid import createNewOoid
 from collector.throttler import DISCARD, IGNORE
-from socorro.lib.datetimeutil import utc_now
+from socorrolib.lib.datetimeutil import utc_now
 from collector.wsgi_generic_collector import GenericCollectorBase
 
 from configman import Namespace, class_converter
