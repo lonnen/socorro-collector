@@ -13,8 +13,8 @@ from collector.submitter_app import (
     SubmitterFileSystemWalkerSource,
 )
 from configman.dotdict import DotDict
-from socorro.external.crashstorage_base import Redactor
-from socorro.unittests.testbase import TestCase
+from socorrolib.external.crashstorage_base import Redactor
+from socorrolib.unittests.testbase import TestCase
 
 
 #------------------------------------------------------------------------------

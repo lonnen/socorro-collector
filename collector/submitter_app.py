@@ -15,15 +15,15 @@ from os import (
 
 from configman import Namespace
 
-from socorro.app.fetch_transform_save_app import (
+from socorrolib.app.fetch_transform_save_app import (
     FetchTransformSaveWithSeparateNewCrashSourceApp,
     main
 )
-from socorro.external.crashstorage_base import (
+from socorrolib.external.crashstorage_base import (
     CrashStorageBase,
     FileDumpsMapping,
 )
-from socorro.external.fs.filesystem import findFileGenerator
+from socorrolib.external.fs.filesystem import findFileGenerator
 from socorrolib.lib.util import DotDict
 
 
@@ -160,7 +160,7 @@ class SubmitterFileSystemWalkerSource(CrashStorageBase):
 # This import is offered for backwards compatibilty.  Note, that there has also
 # been an internal change to the required config, with the source
 # implementation moved into a namespace
-from socorro.external.postgresql.new_crash_source import (
+from socorrolib.external.postgresql.new_crash_source import (
     DBCrashStorageWrapperNewCrashSource as DBSamplingCrashSource
 )
 

@@ -15,7 +15,7 @@ from contextlib import closing
 from configman.dotdict import DotDict
 
 from collector.wsgi_generic_collector import GenericCollector
-from socorro.unittests.testbase import TestCase
+from socorrolib.unittests.testbase import TestCase
 
 
 class ObjectWithValue(object):

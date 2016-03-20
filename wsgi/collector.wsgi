@@ -20,4 +20,4 @@ main(
     config_path=config_path
 )
 
-application = socorro.collector.collector_app.application
+application = socorrolib.collector.collector_app.application
