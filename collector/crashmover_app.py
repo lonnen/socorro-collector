@@ -11,7 +11,7 @@ from socorrolib.app.fetch_transform_save_app import (
     FetchTransformSaveWithSeparateNewCrashSourceApp,
     main
 )
-from socorrolib.external.crashstorage_base import (
+from lib.crashstorage_base import (
     CrashIDNotFound,
 )
 
@@ -50,7 +50,7 @@ class ProcessedCrashCopierApp(FetchTransformSaveWithSeparateNewCrashSourceApp):
             'source.crashstorage_class':
                 'socorrolib.external.boto.crashstorage.BotoS3CrashStorage',
             'destination.crashstorage_class':
-                'socorrolib.external.fs.crashstorage.TarFileCrashStore',
+                'lib.fs.crashstorage.TarFileCrashStore',
             'producer_consumer.producer_consumer_class':
                 'socorrolib.lib.task_manager.TaskManager',
             'producer_consumer.quit_on_empty_queue': True,

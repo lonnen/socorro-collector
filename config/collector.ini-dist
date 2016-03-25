@@ -106,7 +106,7 @@
         #forbidden_keys=url, email, user_id, exploitability,json_dump.sensitive,upload_file_minidump_flash1.json_dump.sensitive,upload_file_minidump_flash2.json_dump.sensitive,upload_file_minidump_browser.json_dump.sensitive,memory_info
 
         # the name of the class that implements a 'redact' method
-        #redactor_class=socorrolib.external.crashstorage_base.Redactor
+        #redactor_class=lib.crashstorage_base.Redactor
 
 [secrets]
 
@@ -172,7 +172,7 @@
 [storage]
 
     # the source storage class
-    crashstorage_class=socorrolib.external.crashstorage_base.PolyCrashStorage
+    crashstorage_class=lib.crashstorage_base.PolyCrashStorage
 
     # a list of keys not allowed in a redacted processed crash
     # see "resource.redactor.forbidden_keys" for the default or override it here
@@ -180,15 +180,15 @@
 
     # the name of the class that implements a 'redact' method
     # see "resource.redactor.redactor_class" for the default or override it here
-    #redactor_class=socorrolib.external.crashstorage_base.Redactor
+    #redactor_class=lib.crashstorage_base.Redactor
 
     # a comma delimited list of storage classes
-    storage_classes='socorrolib.external.fs.crashstorage.FSPermanentStorage, socorrolib.external.rabbitmq.crashstorage.RabbitMQCrashStorage'
+    storage_classes='lib.fs.crashstorage.FSPermanentStorage, socorrolib.external.rabbitmq.crashstorage.RabbitMQCrashStorage'
 
     [[storage0]]
 
         # None
-        crashstorage_class=socorrolib.external.fs.crashstorage.FSPermanentStorage
+        crashstorage_class=lib.fs.crashstorage.FSPermanentStorage
 
         # the default dump field
         # see "resource.fs.dump_field" for the default or override it here
@@ -220,7 +220,7 @@
 
         # the name of the class that implements a 'redact' method
         # see "resource.redactor.redactor_class" for the default or override it here
-        #redactor_class=socorrolib.external.crashstorage_base.Redactor
+        #redactor_class=lib.crashstorage_base.Redactor
 
         # umask to use for new files
         # see "resource.fs.umask" for the default or override it here
@@ -273,7 +273,7 @@
 
         # the name of the class that implements a 'redact' method
         # see "resource.redactor.redactor_class" for the default or override it here
-        #redactor_class=socorrolib.external.crashstorage_base.Redactor
+        #redactor_class=lib.crashstorage_base.Redactor
 
         # the name of reprocessing crash queue name within RabbitMQ
         # see "resource.rabbitmq.reprocessing_queue_name" for the default or override it here
@@ -322,5 +322,4 @@
     #port=8882
 
     # a class implementing a wsgi web server
-    wsgi_server_class=socorrolib.webapi.servers.ApacheModWSGI
-
+    wsgi_server_class=webapi.servers.ApacheModWSGI

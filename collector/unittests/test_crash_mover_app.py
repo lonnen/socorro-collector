@@ -8,7 +8,7 @@ from mock import Mock
 from collector.crashmover_app import CrashMoverApp
 from socorrolib.lib.threaded_task_manager import ThreadedTaskManager
 from socorrolib.lib.util import DotDict, SilentFakeLogger
-from socorrolib.unittests.testbase import TestCase
+from socorrolib.unittest.testbase import TestCase
 
 
 class TestCrashMoverApp(TestCase):

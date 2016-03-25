@@ -163,7 +163,7 @@ class BreakpadCollector2015(BreakpadCollectorBase):
     required_config.storage.add_option(
         'crashstorage_class',
         doc='the source storage class',
-        default='socorrolib.external.fs.crashstorage'
+        default='lib.fs.crashstorage'
                 '.FSLegacyDatedRadixTreeStorage',
         from_string_converter=class_converter
     )

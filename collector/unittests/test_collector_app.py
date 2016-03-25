@@ -7,7 +7,7 @@ from nose.tools import eq_, ok_
 
 from collector.collector_app import CollectorApp, Collector2015App
 from collector.wsgi_breakpad_collector import BreakpadCollector2015
-from socorrolib.unittests.testbase import TestCase
+from socorrolib.unittest.testbase import TestCase
 from configman.dotdict import DotDict
 
 

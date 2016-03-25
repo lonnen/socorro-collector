@@ -19,11 +19,11 @@ from socorrolib.app.fetch_transform_save_app import (
     FetchTransformSaveWithSeparateNewCrashSourceApp,
     main
 )
-from socorrolib.external.crashstorage_base import (
+from lib.crashstorage_base import (
     CrashStorageBase,
     FileDumpsMapping,
 )
-from socorrolib.external.fs.filesystem import findFileGenerator
+from lib.fs.filesystem import findFileGenerator
 from socorrolib.lib.util import DotDict
 
 
@@ -154,16 +154,6 @@ class SubmitterFileSystemWalkerSource(CrashStorageBase):
             # case however, we have only pathnames to work with. So we return
             # this (args, kwargs) form instead
             yield (((prefix, crash_pathnames), ), {})
-
-#==============================================================================
-# this class was relocated to a more appropriate module and given a new name.
-# This import is offered for backwards compatibilty.  Note, that there has also
-# been an internal change to the required config, with the source
-# implementation moved into a namespace
-from socorrolib.external.postgresql.new_crash_source import (
-    DBCrashStorageWrapperNewCrashSource as DBSamplingCrashSource
-)
-
 
 #==============================================================================
 class SubmitterApp(FetchTransformSaveWithSeparateNewCrashSourceApp):

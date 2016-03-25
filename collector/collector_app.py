@@ -11,8 +11,9 @@
 # set both socorro and configman in your PYTHONPATH
 
 from socorrolib.app.generic_app import App, main
-from socorrolib.webapi.class_partial import class_with_partial_init
 from socorrolib.lib.converters import web_services_from_str
+
+from webapi.class_partial import class_with_partial_init
 
 from configman import Namespace
 from configman.converters import class_converter
@@ -41,7 +42,7 @@ class BaseCollectorApp(App):
     required_config.web_server.add_option(
         'wsgi_server_class',
         doc='a class implementing a wsgi web server',
-        default='socorrolib.webapi.servers.CherryPy',
+        default='collector.webapi.servers.CherryPy',
         from_string_converter=class_converter
     )
 
@@ -88,7 +89,7 @@ class CollectorApp(BaseCollectorApp):
     required_config.storage.add_option(
         'crashstorage_class',
         doc='the source storage class',
-        default='socorrolib.external.fs.crashstorage'
+        default='lib.fs.crashstorage'
                 '.FSLegacyDatedRadixTreeStorage',
         from_string_converter=class_converter
     )

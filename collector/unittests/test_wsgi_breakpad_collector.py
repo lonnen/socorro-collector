@@ -18,7 +18,7 @@ from collector.wsgi_breakpad_collector import (
     BreakpadCollector2015
 )
 from collector.throttler import ACCEPT, IGNORE, DEFER
-from socorrolib.unittests.testbase import TestCase
+from socorrolib.unittest.testbase import TestCase
 
 
 class ObjectWithValue(object):
