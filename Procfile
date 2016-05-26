@@ -1,1 +1,1 @@
-web: gunicorn wsgi.collector
+web: gunicorn wsgi.collector --log-file -

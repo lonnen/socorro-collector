@@ -2,7 +2,7 @@ import os
 
 from socorrolib.app.generic_app import main
 
-from webapi.servers import ApacheModWSGI
+from collector.webapi.servers import ApacheModWSGI
 
 from collector.collector_app import CollectorApp
 import collector.collector_app

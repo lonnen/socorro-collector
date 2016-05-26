@@ -4,7 +4,7 @@ from socorrolib.app.socorro_app import (
     SocorroWelcomeApp,
     main
 )
-from webapi.servers import WSGIServer
+from collector.webapi.servers import WSGIServer
 
 import collector.collector_app
 
